@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdminEmpleados.BLL;
 
 namespace AdminEmpleados.PL
 {
@@ -15,6 +16,11 @@ namespace AdminEmpleados.PL
         public frmDepartamentos()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            //Instrucciones de informacion de GUI
         }
     }
 }
