@@ -13,9 +13,18 @@ namespace AdminEmpleados.DAL
     {
         public bool PruebaConectar()
         {
-            try { 
-                
+            try {
+                SqlConnection Conexion = new SqlConnection("");
+                SqlCommand Comando = new SqlCommand();
+
+                Comando.CommandText = "select * from Empleados";
+                Comando.Connection = Conexion;
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+                return true;
             } catch {
+                return false;
             }
         }
     }
