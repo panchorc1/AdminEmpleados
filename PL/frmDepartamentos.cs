@@ -23,6 +23,8 @@ namespace AdminEmpleados.PL
         {
             //Obtiene la información de los campos rellenados
             RecuperarInformacion();
+            ConexionDAL conexion = new ConexionDAL();
+            MessageBox.Show("Conectado..." + conexion.PruebaConectar());
         }
         //Se crea un metodo, crea una instancia utilizando la clase DepartamentoBLL
         private void RecuperarInformacion()
