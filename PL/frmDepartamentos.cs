@@ -24,7 +24,7 @@ namespace AdminEmpleados.PL
             //Obtiene la información de los campos rellenados
             RecuperarInformacion();
             ConexionDAL conexion = new ConexionDAL();
-            MessageBox.Show("Conectado..." + conexion.PruebaConectar());
+            MessageBox.Show("Conectado..." + conexion.PruebaConectar("INSERT INTO Departamentos (departamento) VALUES ('Diseño')"));
         }
         //Se crea un metodo, crea una instancia utilizando la clase DepartamentoBLL
         private void RecuperarInformacion()

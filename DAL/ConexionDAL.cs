@@ -17,16 +17,16 @@ namespace AdminEmpleados.DAL
         public SqlConnection EstablecerConexion()
         {
             this.Conexion = new SqlConnection(this.CadenaConexion);
-            return.this.Conexion;
+            return this.Conexion;
         }
 
-        public bool PruebaConectar()
+        public bool PruebaConectar(string strComando)
         {
             try {
                 
                 SqlCommand Comando = new SqlCommand();
 
-                Comando.CommandText = "select * from Empleados";
+                Comando.CommandText = strComando;
                 Comando.Connection = this.EstablecerConexion();
                 Conexion.Open();
                 Comando.ExecuteNonQuery();
