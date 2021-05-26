@@ -19,8 +19,8 @@ namespace AdminEmpleados.DAL
             this.Conexion = new SqlConnection(this.CadenaConexion);
             return this.Conexion;
         }
-
-        public bool PruebaConectar(string strComando)
+        /*Metodo INSERT, DELETE, UPDATE*/
+        public bool ejecutarComandoSinRetornoDatos(string strComando)
         {
             try {
                 
@@ -36,5 +36,6 @@ namespace AdminEmpleados.DAL
                 return false;
             }
         }
+        /*SELECT (Retorno datos)*/
     }
 }
