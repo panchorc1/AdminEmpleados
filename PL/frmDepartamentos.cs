@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminEmpleados.BLL;
+using AdminEmpleados.DAL;
 
 namespace AdminEmpleados.PL
 {

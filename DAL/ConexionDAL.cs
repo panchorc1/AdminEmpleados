@@ -14,7 +14,7 @@ namespace AdminEmpleados.DAL
         public bool PruebaConectar()
         {
             try {
-                SqlConnection Conexion = new SqlConnection("");
+                SqlConnection Conexion = new SqlConnection("Data Source=DESKTOP-6MQABRN; Initial Catalog=dbSistema; Integrated Security=True");
                 SqlCommand Comando = new SqlCommand();
 
                 Comando.CommandText = "select * from Empleados";
