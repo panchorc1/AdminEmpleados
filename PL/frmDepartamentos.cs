@@ -20,7 +20,20 @@ namespace AdminEmpleados.PL
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //Instrucciones de informacion de GUI
+            //Obtiene la información de los campos rellenados
+            RecuperarInformacion();
+        }
+        //Se crea un metodo, crea una instancia utilizando la clase DepartamentoBLL
+        private void RecuperarInformacion()
+        {
+            DepartamentoBLL oDepartamento = new DepartamentoBLL();
+            int ID = 0; int.TryParse(txtID.Text, out ID);
+            oDepartamento.ID = ID;
+
+            oDepartamento.Departamento = txtNombre.Text;
+            //ToString hace pasar el ID (int) a ID (String)
+            MessageBox.Show(oDepartamento.ID.ToString());
+            MessageBox.Show(oDepartamento.Departamento);
         }
     }
 }
