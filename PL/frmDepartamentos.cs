@@ -26,21 +26,21 @@ namespace AdminEmpleados.PL
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //Obtiene la información de los campos rellenados
-            RecuperarInformacion();
             MessageBox.Show("Conectado...");
-            oDepartamentosDAL.Agregar();
+
+            //Clase DAL Departamentos, pasando objeto con la informacion de la interfaz grafica
+            oDepartamentosDAL.Agregar(RecuperarInformacion());
         }
         //Se crea un metodo, crea una instancia utilizando la clase DepartamentoBLL
-        private void RecuperarInformacion()
+        private DepartamentoBLL RecuperarInformacion()
         {
-            DepartamentoBLL oDepartamento = new DepartamentoBLL();
+            DepartamentoBLL oDepartamentoBLL = new DepartamentoBLL();
             int ID = 0; int.TryParse(txtID.Text, out ID);
-            oDepartamento.ID = ID;
+            oDepartamentoBLL.ID = ID;
 
-            oDepartamento.Departamento = txtNombre.Text;
-            //ToString hace pasar el ID (int) a ID (String)
-            MessageBox.Show(oDepartamento.ID.ToString());
-            MessageBox.Show(oDepartamento.Departamento);
+            oDepartamentoBLL.Departamento = txtNombre.Text;
+
+            return oDepartamentoBLL;
         }
     }
 }

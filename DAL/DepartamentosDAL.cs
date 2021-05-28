@@ -18,9 +18,9 @@ namespace AdminEmpleados.DAL
             conexion = new ConexionDAL();
         }
 
-        public bool Agregar()
+        public bool Agregar(DepartamentoBLL oDepartamentosBLL)
         {
-            return conexion.ejecutarComandoSinRetornoDatos("INSERT INTO Departamentos (departamento) VALUES ('Diseño')");
+            return conexion.ejecutarComandoSinRetornoDatos("INSERT INTO Departamentos (departamento) VALUES ('"+oDepartamentosBLL.Departamento+"')");
         }
 
     }
