@@ -60,5 +60,11 @@ namespace AdminEmpleados.PL
             oDepartamentosDAL.Eliminar(RecuperarInformacion());
             //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            oDepartamentosDAL.Modificar(RecuperarInformacion());
+            //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
+        }
     }
 }

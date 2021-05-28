@@ -28,6 +28,14 @@ namespace AdminEmpleados.DAL
 
             return 1;
         }
+        public int Modificar(DepartamentoBLL oDepartamentosBLL)
+        {
+            conexion.ejecutarComandoSinRetornoDatos("update Departamentos set departamento" +
+                "set departamento='"+oDepartamentosBLL.Departamento+"'"+
+                "where id = "+ oDepartamentosBLL);
+                                                                                                                
+            return 1;
+        }
 
         public DataSet MostrarDepartamentos()
         {
