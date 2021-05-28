@@ -21,7 +21,7 @@ namespace AdminEmpleados.PL
         {
             oDepartamentosDAL = new DepartamentosDAL();
             InitializeComponent();
-            dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
+            //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
 
         }
 
@@ -43,6 +43,15 @@ namespace AdminEmpleados.PL
             oDepartamentoBLL.Departamento = txtNombre.Text;
 
             return oDepartamentoBLL;
+        }
+
+        private void Selecionar(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int indice = e.RowIndex;
+
+            txtID.Text = dgvDepartamentos.Rows[indice].Cells[0].Value.ToString();
+            txtNombre.Text = dgvDepartamentos.Rows[indice].Cells[1].Value.ToString();
+
         }
     }
 }

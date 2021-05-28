@@ -118,6 +118,7 @@ namespace AdminEmpleados.PL
             this.dgvDepartamentos.RowTemplate.Height = 25;
             this.dgvDepartamentos.Size = new System.Drawing.Size(528, 353);
             this.dgvDepartamentos.TabIndex = 8;
+            this.dgvDepartamentos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Selecionar);
             // 
             // frmDepartamentos
             // 
