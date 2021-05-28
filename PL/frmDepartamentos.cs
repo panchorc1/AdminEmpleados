@@ -32,6 +32,7 @@ namespace AdminEmpleados.PL
 
             //Clase DAL Departamentos, pasando objeto con la informacion de la interfaz grafica
             oDepartamentosDAL.Agregar(RecuperarInformacion());
+            //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
         }
         //Se crea un metodo, crea una instancia utilizando la clase DepartamentoBLL
         private DepartamentoBLL RecuperarInformacion()
@@ -52,6 +53,12 @@ namespace AdminEmpleados.PL
             txtID.Text = dgvDepartamentos.Rows[indice].Cells[0].Value.ToString();
             txtNombre.Text = dgvDepartamentos.Rows[indice].Cells[1].Value.ToString();
 
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            oDepartamentosDAL.Eliminar(RecuperarInformacion());
+            //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
         }
     }
 }

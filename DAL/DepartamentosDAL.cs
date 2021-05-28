@@ -22,6 +22,13 @@ namespace AdminEmpleados.DAL
         {
             return conexion.ejecutarComandoSinRetornoDatos("INSERT INTO Departamentos (departamento) VALUES ('"+oDepartamentosBLL.Departamento+"')");
         }
+        public int Eliminar(DepartamentoBLL oDepartamentosBLL)
+        {
+            conexion.ejecutarComandoSinRetornoDatos("delete from Departamentos where id ="+oDepartamentosBLL.ID);
+
+            return 1;
+        }
+
         public DataSet MostrarDepartamentos()
         {
             SqlCommand sentencia = new SqlCommand("select * form Departamentos");
