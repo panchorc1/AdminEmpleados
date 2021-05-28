@@ -113,10 +113,10 @@ namespace AdminEmpleados.PL
             // dgvDepartamentos
             // 
             this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDepartamentos.Location = new System.Drawing.Point(12, 121);
+            this.dgvDepartamentos.Location = new System.Drawing.Point(12, 126);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
             this.dgvDepartamentos.RowTemplate.Height = 25;
-            this.dgvDepartamentos.Size = new System.Drawing.Size(549, 358);
+            this.dgvDepartamentos.Size = new System.Drawing.Size(528, 353);
             this.dgvDepartamentos.TabIndex = 8;
             // 
             // frmDepartamentos

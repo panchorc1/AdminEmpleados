@@ -21,6 +21,8 @@ namespace AdminEmpleados.PL
         {
             oDepartamentosDAL = new DepartamentosDAL();
             InitializeComponent();
+            dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

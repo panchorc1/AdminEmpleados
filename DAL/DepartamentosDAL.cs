@@ -22,6 +22,12 @@ namespace AdminEmpleados.DAL
         {
             return conexion.ejecutarComandoSinRetornoDatos("INSERT INTO Departamentos (departamento) VALUES ('"+oDepartamentosBLL.Departamento+"')");
         }
+        public DataSet MostrarDepartamentos()
+        {
+            SqlCommand sentencia = new SqlCommand("select * form Departamentos");
+
+            return conexion.EjecutarSentencia(sentencia);
+        }
 
     }
 }
