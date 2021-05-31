@@ -21,7 +21,7 @@ namespace AdminEmpleados.PL
         {
             oDepartamentosDAL = new DepartamentosDAL();
             InitializeComponent();
-            //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
+            LlenarGrid();
 
         }
 
@@ -32,7 +32,7 @@ namespace AdminEmpleados.PL
 
             //Clase DAL Departamentos, pasando objeto con la informacion de la interfaz grafica
             oDepartamentosDAL.Agregar(RecuperarInformacion());
-            //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
+            LlenarGrid();
         }
         //Se crea un metodo, crea una instancia utilizando la clase DepartamentoBLL
         private DepartamentoBLL RecuperarInformacion()
@@ -58,12 +58,17 @@ namespace AdminEmpleados.PL
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             oDepartamentosDAL.Eliminar(RecuperarInformacion());
-            //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
+            dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             oDepartamentosDAL.Modificar(RecuperarInformacion());
+            LlenarGrid();
+        }
+
+        public void LlenarGrid()
+        {
             //dgvDepartamentos.DataSource = oDepartamentosDAL.MostrarDepartamentos().Tables[0];
         }
     }

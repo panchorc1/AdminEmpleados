@@ -75,41 +75,50 @@ namespace AdminEmpleados.PL
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Image = global::AdminEmpleados.Properties.Resources._285657_24;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAgregar.Location = new System.Drawing.Point(12, 71);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(89, 33);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.Image = global::AdminEmpleados.Properties.Resources._3643750_24;
             this.btnModificar.Location = new System.Drawing.Point(149, 71);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(89, 33);
+            this.btnModificar.Size = new System.Drawing.Size(102, 33);
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Image = global::AdminEmpleados.Properties.Resources._299045_24;
             this.btnBorrar.Location = new System.Drawing.Point(299, 71);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(89, 33);
             this.btnBorrar.TabIndex = 6;
             this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Image = global::AdminEmpleados.Properties.Resources._290138_24;
             this.btnCancelar.Location = new System.Drawing.Point(451, 71);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 33);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // dgvDepartamentos
