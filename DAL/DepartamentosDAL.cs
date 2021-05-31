@@ -20,7 +20,11 @@ namespace AdminEmpleados.DAL
 
         public bool Agregar(DepartamentoBLL oDepartamentosBLL)
         {
-            return conexion.ejecutarComandoSinRetornoDatos("INSERT INTO Departamentos (departamento) VALUES ('"+oDepartamentosBLL.Departamento+"')");
+            SqlCommand SQLComando = new SqlCommand("insert into Departamentos values (@Departamente)");
+            SQLComando.Parameters.Add("@Departamente", SqlDbType.VarChar).Value=oDepartamentosBLL.Departamento;
+            return conexion.ejecutarComandoSinRetornoDatos(SQLComando);
+            //return conexion.ejecutarComandoSinRetornoDatos("INSERT INTO Departamentos (departamento) VALUES ('"+oDepartamentosBLL.Departamento+"')");
+            
         }
         public int Eliminar(DepartamentoBLL oDepartamentosBLL)
         {

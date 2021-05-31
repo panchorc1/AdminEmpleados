@@ -36,6 +36,25 @@ namespace AdminEmpleados.DAL
                 return false;
             }
         }
+        //Sobrecarga Metodo INSERT, DELETE, UPDATE
+        public bool ejecutarComandoSinRetornoDatos(SqlCommand SQLComando)
+        {
+            try
+            {
+
+                SqlCommand Comando = SQLComando;
+                Comando.Connection = this.EstablecerConexion();
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         /*SELECT (Retorno datos)*/
         public DataSet EjecutarSentencia(SqlCommand sqlComando)
         {
